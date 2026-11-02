@@ -1,36 +1,59 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>인터넷활용 실습 템플릿</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이현우 포트폴리오</title>
+  <!-- 기존 저장소에 있는 style.css 연결 -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>이현우</h1>
-  <p class="subtitle">광운대학교 재학생</p>
-</header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
-</nav>
-<main class="container">
-<section>
-  <h2>홈</h2>
-  <p>안녕하세요! 저는 <strong>이현우</strong> 입니다.</p>
-  <ul>
-    <li>학과/학번: 전기공학과/2026732035</li>
-    <li>관심 분야: 전기공학</li>
-    <li>기술 스택(예: HTML, CSS, JS): (여기에 추가)</li>
-  </ul>
-</section>
-</main>
-<footer>
-  <small>&copy; <span id="year"></span> 이현우</small>
-</footer>
-<script src="script.js"></script>
+
+  <div class="container">
+
+    <header id="top-banner" class="rounded-box large-box">
+      <h1>반갑습니다! 광운대학교 전기공학과 이현우입니다.</h1>
+    </header>
+
+    <main id="main-view">
+
+      <section id="home-section" class="rounded-box medium-box">
+        <h2>홈</h2>
+        <p>안녕하세요! 저는 <strong>이현우</strong> 입니다.</p>
+        <ul>
+          <li>학과/학번: 전기공학과/2026732035</li>
+          <li>관심 분야: 전기공학</li>
+          <li>기술 스택(예: HTML, CSS, JS): (여기에 추가)</li>
+        </ul>
+      </section>
+
+      <nav id="card-grid" aria-label="주요 메뉴 카드">
+        
+        <a href="about.html" class="nav-card rounded-card">
+          <h3>About</h3>
+          <p>자기소개 및 학력, 관심 분야 보기</p>
+        </a>
+
+        <a href="portfolio.html" class="nav-card rounded-card">
+          <h3>Portfolio</h3>
+          <p>프로젝트 및 과제 목록 보기</p>
+        </a>
+
+        <a href="contact.html" class="nav-card rounded-card">
+          <h3>Contact</h3>
+          <p>연락처 및 메시지 보내기</p>
+        </a>
+
+      </nav>
+
+    </main>
+
+    <footer>
+      <p>© 2026 이현우</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
