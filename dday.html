@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - 이현우 포트폴리오</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header id="top-banner" class="rounded-box large-box">
+            <h1>이름: (여기에 추가)</h1>
+            <p>한 줄 소개: (여기에 추가)</p>
+        </header>
+
+        <main id="main-view">
+
+            <section>
+                <h2>Date 객체 활용: D-Day 계산기</h2>
+                <script>
+                    let now = new Date();
+
+                    let yearStr = prompt("목표 연도를 입력하세요 (예: 2025)");
+                    let monthStr = prompt("목표 월을 입력하세요 (예: 12)");
+                    let dayStr = prompt("목표 일을 입력하세요 (예: 25)");
+
+                    if (!yearStr || !monthStr || !dayStr) {
+                        document.write("<p>계산을 취소했습니다.</p>");
+                    } else {
+                        let year = parseInt(yearStr);
+                        let month = parseInt(monthStr);
+                        let day = parseInt(dayStr);
+
+                        let targetDate = new Date(year, month - 1, day);
+
+                        let diffMs = targetDate.getTime() - now.getTime();
+
+                        let diffDay = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+                        document.write("<h3>목표 날짜: " + targetDate.toLocaleString() + "</h3>");
+
+                        if (diffDay === 0) {
+                            document.write("<h3>D-Day 입니다!</h3>");
+                        } else if (diffDay > 0) {
+                            document.write("<h3>D-" + diffDay + "일 남았습니다.</h3>");
+                        } else {
+                            document.write("<h3>D+" + Math.abs(diffDay) + "일 지났습니다.</h3>");
+                        }
+
+                        document.write("<hr>");
+                        document.write("<p>오늘 날짜: " + now.toLocaleString() + "</p>");
+                        document.write("<p><i>새로고침(F5)을 눌러 다시 계산할 수 있습니다.</i></p>");
+                    }
+                </script>
+
+                <p style="margin-top: 20px;">
+                    <a href="portfolio.html"><strong>&larr; 포트폴리오 목록으로 돌아가기</strong></a>
+                </p>
+            </section>
+
+            <nav id="card-grid" aria-label="주요 메뉴 카드">
+
+                <a href="index.html" class="nav-card rounded-card">
+                    <h3>Home</h3>
+                    <p>메인 홈 화면으로 돌아가기</p>
+                </a>
+
+                <a href="about.html" class="nav-card rounded-card">
+                    <h3>About</h3>
+                    <p>자기소개 및 학력, 관심 분야 보기</p>
+                </a>
+
+                <a href="contact.html" class="nav-card rounded-card">
+                    <h3>Contact</h3>
+                    <p>연락처 및 메시지 보내기</p>
+                </a>
+
+            </nav>
+
+        </main>
+
+        <footer>
+            <p>© 2026 이름: (여기에 추가)</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
