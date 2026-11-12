@@ -1,43 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>인터넷활용 실습 템플릿</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - 이현우 포트폴리오</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <h1>이름: (여기에 추가)</h1>
-  <p class="subtitle">한 줄 소개: (여기에 추가)</p>
-</header>
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
-</nav>
-<main class="container">
-<section>
-  <h2>Contact</h2>
-  <ul>
-    <li>이메일: (여기에 추가)</li>
-    <li>GitHub: (여기에 추가)</li>
-    <li>기타 링크(블로그/노션 등): (여기에 추가)</li>
-  </ul>
-  <!-- 아래는 정말 기본 예시 폼입니다. JS 없이도 동작하지 않아도 되며, 형태만 제공합니다. -->
-  <form class="contact-form" onsubmit="return false;">
-    <label>이름</label>
-    <input type="text" placeholder="이름을 입력하세요">
-    <label>메시지</label>
-    <textarea rows="4" placeholder="메시지를 입력하세요"></textarea>
-    <button type="submit">보내기 (동작X, 형태만)</button>
-  </form>
-</section>
-</main>
-<footer>
-  <small>&copy; <span id="year"></span> 이름: (여기에 추가)</small>
-</footer>
-<script src="script.js"></script>
+
+  <div class="container">
+    
+    <header id="top-banner" class="rounded-box large-box">
+      <h1>이름: (여기에 추가)</h1>
+      <p>한 줄 소개: (여기에 추가)</p>
+    </header>
+
+    <main id="main-view">
+
+      <section id="home-section" class="rounded-box medium-box">
+        <h2>Contact</h2>
+        <ul>
+          <li>이메일: (여기에 추가)</li>
+          <li>GitHub: (여기에 추가)</li>
+          <li>기타 링크(블로그/노션 등): (여기에 추가)</li>
+        </ul>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="user-name">이름</label>
+            <input type="text" id="user-name" name="name" placeholder="이름을 입력하세요">
+          </div>
+
+          <div class="form-group">
+            <label for="user-message">메시지</label>
+            <textarea id="user-message" name="message" rows="5" placeholder="메시지를 입력하세요"></textarea>
+          </div>
+
+          <button type="button" id="submit-btn">보내기 (동작X, 형태만)</button>
+        </form>
+      </section>
+
+      <nav id="card-grid" aria-label="주요 메뉴 카드">
+        
+        <a href="index.html" class="nav-card rounded-card">
+          <h3>Home</h3>
+          <p>메인 홈 화면으로 돌아가기</p>
+        </a>
+
+        <a href="about.html" class="nav-card rounded-card">
+          <h3>About</h3>
+          <p>자기소개 및 학력, 관심 분야 보기</p>
+        </a>
+
+        <a href="portfolio.html" class="nav-card rounded-card">
+          <h3>Portfolio</h3>
+          <p>프로젝트 및 과제 목록 보기</p>
+        </a>
+
+      </nav>
+
+    </main>
+
+    <footer>
+      <p>© 2026 이름: (여기에 추가)</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
